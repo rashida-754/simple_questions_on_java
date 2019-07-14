@@ -1,0 +1,26 @@
+//Find biggest and smallest number among N numbers
+import java.io.*;
+import java.util.*;
+class Big_SmallN
+{
+   public static void main(String args[])throws IOException
+   {
+      InputStreamReader ob = new InputStreamReader(System.in);
+	  BufferedReader obj = new BufferedReader(ob);
+	  int N,i;
+	  System.out.println("Enter number of elements : ");
+	  N = Integer.parseInt(obj.readLine());
+	  if(N<0)
+	    System.out.println("Value of N cannot be negative");
+	  else
+	  {
+	     ArrayList<Double> l = new ArrayList<>();
+		 System.out.println("Enter numbers : ");
+		 for(i=0;i<N;i++)
+		    l.add(Double.parseDouble(obj.readLine()));
+		 Collections.sort(l);
+		 System.out.println("Smallest number is : " + l.get(0));
+		 System.out.println("Largest number is : " + l.get(N-1));
+	  }
+   }
+}
