@@ -1,0 +1,36 @@
+//to check given number is armstrong or not
+import java.util.Scanner;
+class Armstrong
+{
+    private static int count(int n)
+	{
+	  String s = String.valueOf(n);
+	  return s.length();
+	}
+    private static  int comp(int n)
+	{
+	   int count=count(n),i,sum=0,d;
+	   while(n>0)
+	   {
+	      d = n%10;
+		  sum += (int)Math.pow(d,count);
+		  n = n/10;
+	   }
+	   return sum;
+	}
+    private static void print_arm(int n)
+	{
+	   if(comp(n)==n)
+	     System.out.println(n+" is a armstrong number");
+	   else
+	     System.out.println(n+" is not a armstrong number");
+	}
+    public static void main(String args[])
+	{
+	   Scanner sc = new Scanner(System.in);
+	   int n;
+	   System.out.println("Enter a number :");
+	   n = sc.nextInt();
+	   print_arm(n);
+	}
+}
