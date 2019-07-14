@@ -1,0 +1,31 @@
+//Print Biggest and Smallest number among 3 numbers
+import java.io.*;
+class Big_Small
+{
+   public static void main(String args[])throws IOException
+   {
+      InputStreamReader ob = new InputStreamReader(System.in);
+	  BufferedReader obj = new BufferedReader(ob);
+	  double a,b,c,max,min;
+	  System.out.println("Enter 3 number:");
+	  a = Double.parseDouble(obj.readLine());
+	  b = Double.parseDouble(obj.readLine());
+	  c = Double.parseDouble(obj.readLine());
+	  //for calculating biggest number;
+	  if(a>b && a>c)
+	     max = a;
+	  else if(b>c)
+	     max = b;
+	  else
+	     max = c;
+	  //for calculating smallest number;
+	  if(a<b && a<c)
+	     min = a;
+	  else if(b<c)
+	     min = b;
+	  else
+	     min = c;
+	  System.out.println("Biggest number : "+max);
+	  System.out.println("Smallest number : "+min);
+   }
+}
